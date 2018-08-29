@@ -1,0 +1,20 @@
+{
+  "name": "filter-angular-app",
+  "version": "1.0.0",
+  "description": "Filter Angular App Test for Frontend/UI Developer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warnerjc/filter-angular-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/warnerjc/filter-angular-app/issues"
+  },
+  "homepage": "https://github.com/warnerjc/filter-angular-app#readme"
+}
