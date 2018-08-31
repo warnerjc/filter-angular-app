@@ -9,6 +9,12 @@ angular.module('appRoutes', []).config(['$locationProvider','$routeProvider', fu
         .when('/', {
             templateUrl: './views/home.html',
             controller: 'HomeController'
+        })
+
+        // filter drop down
+        .when('/filter', {
+            templateUrl: './views/filtered.html',
+            controller: 'HomeController'
         });
 
     $locationProvider.html5Mode( {
