@@ -7,7 +7,7 @@ angular.module('HomeCntrl', []).controller('HomeController', function($scope, $h
             // when the response is available
             console.log(`departments \n${res.data}`)
 
-            $scope.departments = res.data;
+            $scope.departments = res.data.departments;
         }, function errorCallback(err) {
             // called asynchronously if an error occurs
             // or server returns response with an error status.
