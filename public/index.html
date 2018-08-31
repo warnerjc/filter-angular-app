@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="filterApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
-<body>
+<body ng-controller="HomeController">
+
     <div class="body-wrapper">
         <header>
             <section class="filter-list">
@@ -28,6 +29,15 @@
         <section>
             <div class="data-wrapper">
                 <ul class="filtered-student">
+                    <li ng-repeat='student in students'>
+                        <span class="name">{{ student.familyName + ", " + student.givenName }}</span>
+                        <span class="dob">DOB: <span class="value">{{ student.dob }}</span></span>
+                        <span class="admit-date">Admitted: <span class="value">{{ student.admitDate }}</span></span>
+                        <span class="grad-date">Anticipated Graduation: <span class="value">{{ student.anticipatedGraduationDate }}</span></span>
+                        <span class="mentor">Mentor: <span class="value">{{ student.mentor.familyName + ", " + student.mentor.givenName }}</span></span>
+                    </li>
+                </ul>
+                <!-- <ul class="filtered-student">
                     <li>
                         <span class="name">Ruiz, Jackie</span>
                         <span class="dob">DOB: <span class="value">07/08/1990</span></span>
@@ -85,14 +95,18 @@
                         <span class="mentor">Mentor: <span class="value">Conway, Aaron</span></span>
                     </li>
 
-                </ul>
+                </ul> -->
             </div>
         </section>
     </div>
 
     <!-- JavaScript Sources -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="./libs/angular/angular.js"></script>
+    <script src="./libs/angular-route/angular-route.js"></script>
+    <script src="./js/controllers/HomeCntrl.js"></script>
+    <script src="./js/services/HomeServices.js"></script>
     <script src="./js/appRoutes.js"></script>
     <script src="./js/app.js"></script>
+
 </body>
 </html>
